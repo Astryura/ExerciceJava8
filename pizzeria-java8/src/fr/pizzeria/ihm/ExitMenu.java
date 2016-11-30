@@ -1,12 +1,6 @@
 package fr.pizzeria.ihm;
 
-public class ExitMenu extends Action {
-
-	
-	public ExitMenu() {
-		super();
-		this.setDescription("99. Sortir");
-	}
+public class ExitMenu implements Action {
 
 	@Override
 	public void doAction() {
@@ -15,7 +9,7 @@ public class ExitMenu extends Action {
 
 	@Override
 	public void describeAction() {
-		System.out.println(this.getDescription());
+		System.out.println("99. Sortir");
 	}
 
 }

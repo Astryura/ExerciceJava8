@@ -23,10 +23,6 @@ public class MainMenu {
 		actions.forEach((k, v) -> {
 			actions.get(k).describeAction();
 		});
-		/*
-		 * for (int i = 0; i < actions.size(); ++i) {
-		 * actions.get(i).describeAction(); }
-		 */
 		parseAndExec();
 	}
 

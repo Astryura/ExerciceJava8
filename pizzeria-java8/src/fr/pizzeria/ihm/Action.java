@@ -1,17 +1,8 @@
 package fr.pizzeria.ihm;
 
-public abstract class Action {
+public interface Action {
 
-	private String description;
+	void doAction();
 
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public abstract void doAction();
-	public abstract void describeAction();
+	void describeAction();
 }

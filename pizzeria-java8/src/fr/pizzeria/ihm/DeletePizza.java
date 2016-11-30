@@ -1,13 +1,12 @@
 package fr.pizzeria.ihm;
 
-public class DeletePizza extends Action {
+public class DeletePizza implements Action {
 
 	private IhmUtil ihmUtil;
 
 	public DeletePizza(IhmUtil ihmUtil) {
 		super();
 		this.ihmUtil = ihmUtil;
-		this.setDescription("4. Supprimer une pizza");
 	}
 
 	@Override
@@ -20,7 +19,7 @@ public class DeletePizza extends Action {
 
 	@Override
 	public void describeAction() {
-		System.out.println(this.getDescription());
+		System.out.println("4. Supprimer une pizza");
 	}
 
 }

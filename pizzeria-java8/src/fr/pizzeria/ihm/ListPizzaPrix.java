@@ -2,14 +2,13 @@ package fr.pizzeria.ihm;
 
 import fr.pizzeria.model.Pizza;
 
-public class ListPizzaPrix extends Action {
+public class ListPizzaPrix implements Action {
 
 	private IhmUtil ihmUtil;
 
 	public ListPizzaPrix(IhmUtil ihmUtil) {
 		super();
 		this.ihmUtil = ihmUtil;
-		this.setDescription("6. Afficher la Pizza la plus cher");
 	}
 
 	@Override
@@ -22,7 +21,7 @@ public class ListPizzaPrix extends Action {
 
 	@Override
 	public void describeAction() {
-		System.out.println(this.getDescription());
+		System.out.println("6. Afficher la Pizza la plus cher");
 	}
 
 }

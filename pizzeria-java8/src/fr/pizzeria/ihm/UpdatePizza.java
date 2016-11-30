@@ -3,7 +3,7 @@ package fr.pizzeria.ihm;
 import fr.pizzeria.model.CategoriePizza;
 import fr.pizzeria.model.Pizza;
 
-public class UpdatePizza extends Action {
+public class UpdatePizza implements Action {
 
 	private IhmUtil ihmUtil;
 	CategoriePizza catP;
@@ -11,7 +11,6 @@ public class UpdatePizza extends Action {
 	public UpdatePizza(IhmUtil ihmUtil) {
 		super();
 		this.ihmUtil = ihmUtil;
-		this.setDescription("3. Mettre à jour une pizza");
 	}
 
 	@Override
@@ -46,7 +45,7 @@ public class UpdatePizza extends Action {
 
 	@Override
 	public void describeAction() {
-		System.out.println(this.getDescription());
+		System.out.println("3. Mettre à jour une pizza");
 	}
 
 }

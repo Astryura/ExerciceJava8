@@ -4,14 +4,13 @@ import java.util.List;
 
 import fr.pizzeria.model.Pizza;
 
-public class ListPizzaCat extends Action {
+public class ListPizzaCat implements Action {
 
 	private IhmUtil ihmUtil;
 
 	public ListPizzaCat(IhmUtil ihmUtil) {
 		super();
 		this.ihmUtil = ihmUtil;
-		this.setDescription("5. Lister les pizzas par Catégories");
 	}
 
 	@Override
@@ -26,7 +25,7 @@ public class ListPizzaCat extends Action {
 
 	@Override
 	public void describeAction() {
-		System.out.println(this.getDescription());
+		System.out.println("5. Lister les pizzas par Catégories");
 	}
 
 }
