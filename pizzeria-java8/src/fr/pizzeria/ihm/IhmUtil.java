@@ -8,12 +8,12 @@ import fr.pizzeria.dao.pizza.PizzaDao;
 public class IhmUtil {
 
 	private Scanner scanner;
-	private DaoFactory pizzaDaoFactory;
+	private DaoFactory daoFactory;
 
-	public IhmUtil(Scanner scanner, DaoFactory pizzaDaoFactory) {
+	public IhmUtil(Scanner scanner, DaoFactory daoFactory) {
 
 		this.scanner = scanner;
-		this.pizzaDaoFactory = pizzaDaoFactory;
+		this.daoFactory = daoFactory;
 	}
 
 	public Scanner getScanner() {
@@ -25,11 +25,11 @@ public class IhmUtil {
 	}
 
 	public PizzaDao getPizzaDao() {
-		return pizzaDaoFactory.getPizzaDao();
+		return daoFactory.getPizzaDao();
 	}
 
 	public void setPizzaDao(DaoFactory pizzaDao) {
-		this.pizzaDaoFactory = pizzaDao;
+		this.daoFactory = pizzaDao;
 	}
 
 }
