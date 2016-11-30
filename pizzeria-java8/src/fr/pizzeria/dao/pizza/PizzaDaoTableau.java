@@ -48,13 +48,16 @@ public class PizzaDaoTableau implements PizzaDao {
 
 	@Override
 	public void saveNewPizza(Pizza pizza) {
-		int id = listPizzas.size();
-		Pizza p = listPizzas.get(id - 1);
-		pizza.setId((p.getId()) + 1);
-		listPizzas.add(pizza);
-		int nbPizza = Pizza.getNbPizzas();
-		nbPizza++;
-		Pizza.setNbPizzas(nbPizza);
+		Comparator<Pizza> comp = Comparator.comparing(Pizza::getId);
+		Optional<Pizza> p = listPizzas.stream().max(comp);
+		if (p.isPresent()) {
+			Pizza max = p.get();
+			pizza.setId(max.getId() + 1);
+			listPizzas.add(pizza);
+			int nbPizza = Pizza.getNbPizzas();
+			nbPizza++;
+			Pizza.setNbPizzas(nbPizza);
+		}
 	}
 
 	@Override
