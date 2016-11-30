@@ -10,10 +10,10 @@ public class IhmUtil {
 	private Scanner scanner;
 	private DaoFactory pizzaDaoFactory;
 
-	public IhmUtil(Scanner scanner, DaoFactory pizzaDao) {
+	public IhmUtil(Scanner scanner, DaoFactory pizzaDaoFactory) {
 
 		this.scanner = scanner;
-		this.pizzaDaoFactory = pizzaDao;
+		this.pizzaDaoFactory = pizzaDaoFactory;
 	}
 
 	public Scanner getScanner() {
