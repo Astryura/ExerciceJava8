@@ -28,8 +28,8 @@ public class IhmUtil {
 		return daoFactory.getPizzaDao();
 	}
 
-	public void setPizzaDao(DaoFactory pizzaDao) {
-		this.daoFactory = pizzaDao;
+	public void setPizzaDao(DaoFactory daoFactory) {
+		this.daoFactory = daoFactory;
 	}
 
 }
