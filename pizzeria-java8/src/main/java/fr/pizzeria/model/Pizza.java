@@ -1,5 +1,8 @@
 package fr.pizzeria.model;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 public class Pizza {
 	int id;
 	String code;
@@ -24,6 +27,10 @@ public class Pizza {
 		this.nom = nom;
 		this.prix = prix;
 		this.catP = catP;
+	}
+
+	public Pizza() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getCatP() {
@@ -72,5 +79,28 @@ public class Pizza {
 
 	public void setPrix(double prix) {
 		this.prix = prix;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		if (obj == this) {
+			return true;
+		}
+		if (obj.getClass() != getClass()) {
+			return false;
+		}
+		Pizza rhs = (Pizza) obj;
+		return new EqualsBuilder().append(id, rhs.id).append(code, rhs.code).append(nom, rhs.nom).append(prix, rhs.prix)
+				.append(catP, rhs.catP).isEquals();
+	}
+
+	@Override
+	public int hashCode() {
+		// you pick a hard-coded, randomly chosen, non-zero, odd number
+		// ideally different for each class
+		return new HashCodeBuilder(17, 37).append(nom).append(id).toHashCode();
 	}
 }
